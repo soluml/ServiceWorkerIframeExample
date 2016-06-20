@@ -2,7 +2,9 @@ if('serviceWorker' in navigator) {
   navigator.serviceWorker.register('sw.js')
     .then(reg => {
       const doc = document.getElementById('iframe').contentDocument;
-      const html = `<!doctype html>
+
+      doc.open();
+      doc.write(`<!doctype html>
         <html>
           <head>
             <meta charset="utf-8">
@@ -14,9 +16,7 @@ if('serviceWorker' in navigator) {
             <div class="well">Here's the iframe body in a Bootstrap well. It should show up even though the src is wrong because of parents Service Worker.</div>
           </body>
         </html>
-      `;
-      doc.open();
-      doc.write(html);
+      `);
       doc.close();
     });
 }
