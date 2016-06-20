@@ -7,6 +7,8 @@ self.addEventListener('activate', event => {
 });
 
 self.addEventListener('fetch', event => {
+  console.log('Fetching ->', event.request.url);
+
   const processCSSRequest = () => fetch(`local-bootstrap.min.css`);
 
   if(event.request.url == `https://notarealcdn.com/bootstrap.min.css`)
