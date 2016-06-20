@@ -13,7 +13,7 @@ if('serviceWorker' in navigator) {
             <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
           </head>
           <body>
-            <div class="well">Here's the iframe body in a .well class. Bootstrap should be substitueted for a local CSS file, which turns this text blue.</div>
+            <div class="well">This is iframe body text. It should be blue because the parent SW is proxying our local CSS file in place of the Bootstrap CDN.</div>
           </body>
         </html>
       `);
