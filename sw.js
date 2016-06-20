@@ -1,24 +1,9 @@
-const CACHE_NAME = 'cache-v0';
-const Paths = [
-  '/'
-];
-
 self.addEventListener('install', event => {
-  event.waitUntil(
-    caches.open(CACHE_NAME)
-      .then(cache => cache.addAll(Paths))
-  );
+  console.log('Installed');
 });
 
 self.addEventListener('activate', event => {
-  event.waitUntil(
-    caches.keys()
-      .then(cacheNames => Promise.all(
-        cacheNames
-          .filter(cacheName => cacheName.startsWith('reader-') && cacheName != CACHE_NAME)
-          .map(cacheName => caches.delete(cacheName))
-      ))
-  );
+  console.log('Activated');
 });
 
 self.addEventListener('fetch', event => {
