@@ -13,7 +13,7 @@ if('serviceWorker' in navigator) {
             <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
           </head>
           <body>
-            <div class="well">Here's the iframe body in a Bootstrap well. It should show up even though the src is wrong because of parents Service Worker.</div>
+            <div class="well">Here's the iframe body in a .well class. Bootstrap should be substitueted for a local CSS file, which turns this text blue.</div>
           </body>
         </html>
       `);
