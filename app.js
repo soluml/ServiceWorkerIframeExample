@@ -10,7 +10,7 @@ if('serviceWorker' in navigator) {
             <meta charset="utf-8">
             <meta http-equiv="x-ua-compatible" content="ie=edge">
             <title>Iframe Service Worker Proxy - Iframe</title>
-            <link href="https://notarealcdn.com/bootstrap.min.css" rel="stylesheet">
+            <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
           </head>
           <body>
             <div class="well">Here's the iframe body in a Bootstrap well. It should show up even though the src is wrong because of parents Service Worker.</div>
